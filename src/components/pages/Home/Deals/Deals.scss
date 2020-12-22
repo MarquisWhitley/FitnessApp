@@ -1,0 +1,33 @@
+.deals-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  background-color: rgb(66, 66, 66);
+
+  .deals-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+
+    .deals-trial {
+      background-color: rgba(24, 8, 8, 0.822);
+      border-radius: 20px;
+      -webkit-box-shadow: 5px 5px 30px 5px #000000;
+      box-shadow: 5px 5px 30px 2px #000000;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      color: white;
+      min-width: 300px;
+
+      .deals-title {
+        border-bottom: 1px solid black;
+      }
+
+      .perks-wrapper {
+        margin: 25px 0;
+      }
+    }
+  }
+}
