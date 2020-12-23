@@ -55,7 +55,9 @@ function Footer() {
           </div>
           <div className='footer-links-items'>
             <h2>Social Media</h2>
-            <Link to='/about-us'>Instagram</Link>
+            <Link to='https://www.google.com/' target='_blank'>
+              Instagram
+            </Link>
             <Link to='/about-us'>Facebook</Link>
             <Link to='/about-us'>Twitter</Link>
             <Link to='/about-us'>Youtube</Link>

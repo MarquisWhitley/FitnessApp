@@ -8,6 +8,9 @@ function Home() {
       <h1 className='home-title'>
         Create your own <br /> Healthy Lifestyle!
       </h1>
+      <small className='home-text'>
+        <em>Don't have an account?</em>
+      </small>
       <Button buttonStyle='btn--outline'>Get Started</Button>
     </div>
   );

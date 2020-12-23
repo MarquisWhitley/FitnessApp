@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button.component';
 import './Navbar.scss';
 
 function Navbar() {
@@ -12,14 +13,14 @@ function Navbar() {
         <Link to='/'>
           <li>Home</li>
         </Link>
+        <Link to='/contact'>
+          <li>Exercises</li>
+        </Link>
         <Link to='/about-us'>
           <li>About Us</li>
         </Link>
-        <Link to='/contact'>
-          <li>Contact</li>
-        </Link>
         <Link to='/sign-up'>
-          <li>SignUp</li>
+          <Button buttonStyle='btn--outline'>Sign In</Button>
         </Link>
       </ul>
     </nav>

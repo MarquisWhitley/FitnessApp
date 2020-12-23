@@ -19,6 +19,11 @@
   li {
     list-style: none;
     color: white;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: #b3b3b3;
+    }
   }
 
   a {

@@ -13,6 +13,10 @@ a {
   color: black;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   background: url('./images/HomeYoga.jpg') center center/cover no-repeat;
   clip-path: polygon(
