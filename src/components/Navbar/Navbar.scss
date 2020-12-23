@@ -1,12 +1,13 @@
 .nav {
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
   width: 100%;
-  // background-color: rgb(209, 203, 203);
   background-color: transparent;
   color: white;
+  z-index: 5;
 
   .links {
     width: 30%;

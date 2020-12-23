@@ -6,22 +6,24 @@
   min-height: 15vh;
   flex-direction: column;
   background-color: rgba(24, 8, 8, 0.822);
-  padding: 4rem 0;
+  padding: 2rem 0;
 
   .footer-subscription {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 1rem 0 2rem;
     width: 100%;
 
     .footer-title {
       font-size: 24px;
       max-width: 750px;
-      margin: 0;
+      // margin: 1rem;
     }
 
     .footer-text {
       font-size: 16px;
+      margin: 1rem;
     }
     .footer-input {
       padding: 8px 20px;
