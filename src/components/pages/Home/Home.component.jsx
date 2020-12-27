@@ -1,13 +1,17 @@
 import React from 'react';
+import ExerciseCards from '../Exercises/ExerciseCards/ExerciseCards.component';
 import Deals from './Deals/Deals.component';
-import Exercises from './Exercises/Exercises.component';
+import HomeBG from './HomeBG/HomeBG.component';
 
 function Home() {
   return (
-    <div>
-      <Exercises />
-      <Deals />
-    </div>
+    <>
+      <div>
+        <HomeBG />
+        <ExerciseCards />
+        <Deals />
+      </div>
+    </>
   );
 }
 

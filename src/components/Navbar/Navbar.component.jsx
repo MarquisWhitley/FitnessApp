@@ -13,14 +13,14 @@ function Navbar() {
         <Link to='/'>
           <li>Home</li>
         </Link>
-        <Link to='/contact'>
+        <Link to='/exercises'>
           <li>Exercises</li>
         </Link>
         <Link to='/about-us'>
           <li>About Us</li>
         </Link>
-        <Link to='/sign-up'>
-          <Button buttonStyle='btn--outline'>Sign In</Button>
+        <Link to='/sign-in'>
+          <Button buttonStyle='btn--outline'>Sign In / Get Started</Button>
         </Link>
       </ul>
     </nav>

@@ -1,0 +1,28 @@
+// Card Colors
+
+$card-primary: rgb(241, 247, 0);
+$card-primary-gradient: linear-gradient(
+  215deg,
+  #f1f700 33%,
+  rgba(255, 255, 255, 1) 100%
+);
+
+$card-secondary: rgb(230, 230, 230);
+$card-secondary-gradient: linear-gradient(
+  215deg,
+  rgba(230, 230, 230, 1) 33%,
+  rgba(255, 255, 255, 1) 100%
+);
+
+//Card Width
+
+$card-width: 300px;
+$card-height: 500px;
+
+@function set-background-color($color) {
+  @if ($color = $card-primary) {
+    @return $card-primary;
+  } @else {
+    @return $card-secondary;
+  }
+}
