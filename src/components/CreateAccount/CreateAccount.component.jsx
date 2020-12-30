@@ -1,8 +1,9 @@
 import React from 'react';
+import './CreateAccount.scss';
 
 function CreateAccount() {
   return (
-    <div>
+    <div className='create'>
       <h1>CreateAccount Page</h1>
     </div>
   );

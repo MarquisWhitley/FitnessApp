@@ -7,19 +7,65 @@ import Home from './components/pages/Home/Home.component';
 import AboutUs from './components/pages/AboutUs/AboutUs.component';
 import Exercise from './components/pages/Exercises/Exercise.component';
 import CreateAccount from './components/CreateAccount/CreateAccount.component';
+import { Fragment } from 'react';
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <Navbar />
-        <Route path='/' exact component={Home} />
-        <Route path='/about-us' component={AboutUs} />
-        <Route path='/exercises' component={Exercise} />
-        <Route path='/sign-in' component={SignIn} />
         <Switch>
-          <Route path='/create-account' component={CreateAccount} />
-          <Footer />
+          <Route
+            path='/'
+            exact
+            render={() => (
+              <Fragment>
+                <Navbar />
+                <Home />
+                <Footer />
+              </Fragment>
+            )}
+          />
+          <Route
+            path='/about-us'
+            exact
+            render={() => (
+              <Fragment>
+                <Navbar />
+                <AboutUs />
+                <Footer />
+              </Fragment>
+            )}
+          />
+          <Route
+            path='/exercises'
+            exact
+            render={() => (
+              <Fragment>
+                <Navbar />
+                <Exercise />
+                <Footer />
+              </Fragment>
+            )}
+          />
+          <Route
+            path='/sign-in'
+            exact
+            render={() => (
+              <Fragment>
+                <Navbar />
+                <SignIn />
+                <Footer />
+              </Fragment>
+            )}
+          />
+          <Route
+            path='/create-account'
+            render={() => (
+              <Fragment>
+                <CreateAccount />
+              </Fragment>
+            )}
+          />
         </Switch>
       </div>
     </Router>

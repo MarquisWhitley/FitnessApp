@@ -5,26 +5,37 @@ import './ExerciseCard.scss';
 import Special from './Special';
 import './Special.scss';
 
-function ExerciseCard({ src, exercise, description, path, premium, rating }) {
+function ExerciseCard({
+  id,
+  src,
+  exercise,
+  description,
+  path,
+  premium,
+  rating,
+}) {
   let numberOfStars = 15;
   let stars = Array(numberOfStars).fill(0);
   return (
-    <Link>
+    <>
       <li
         className={`card ${premium ? 'Premium' : 'Standard'}`}
         data-type={premium ? 'Premium' : 'Standard'}
+        key={id}
       >
         <div
           className={`cards__item  ${
             premium ? 'cards__premium' : 'cards__standard'
           }`}
         >
-          <Link className='cards__item__link'>
+          <div className='cards__item__link'>
             <div className='content'>
               <div className={`${premium ? 'night' : null}`}>
                 {premium
-                  ? stars.map(() => {
-                      return <Special className='shooting_star'></Special>;
+                  ? stars.map((stars, i) => {
+                      return (
+                        <Special className='shooting_star' key={i}></Special>
+                      );
                     })
                   : null}
               </div>
@@ -48,10 +59,10 @@ function ExerciseCard({ src, exercise, description, path, premium, rating }) {
                 </Link>
               </div>
             </div>
-          </Link>
+          </div>
         </div>
       </li>
-    </Link>
+    </>
   );
 }
 

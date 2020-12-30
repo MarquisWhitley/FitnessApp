@@ -1,14 +1,25 @@
+@import '../../Styles.Utilities/utilities';
+
 .nav {
   position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
+  top: 0;
   width: 100%;
-  background-color: transparent;
-  color: white;
-  z-index: 5;
+  background: rgb(93, 92, 97);
+  background: linear-gradient(
+    180deg,
+    rgba(93, 92, 97, 1) 0%,
+    rgba(142, 137, 142, 1) 100%
+  );
+  z-index: 100;
+  transition: top 0.2s ease-in-out;
 
+  &.scrolledDown {
+    top: -10vh;
+  }
   .links {
     width: 30%;
     display: flex;

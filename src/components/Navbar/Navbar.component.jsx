@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../Button/Button.component';
 import './Navbar.scss';
 
 function Navbar() {
+  const [scroll, scrolledDown] = useState(false);
+
+  let prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    let currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      scrolledDown(false);
+    } else {
+      scrolledDown(true);
+    }
+    prevScrollpos = currentScrollPos;
+  };
   return (
-    <nav className='nav'>
+    <nav className={`nav ${scroll ? 'scrolledDown' : null}`}>
       <Link to='/'>
         <h3>Logo</h3>
       </Link>
