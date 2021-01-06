@@ -55,7 +55,7 @@ function ExerciseCard({
               </div>
               <div className='button__container'>
                 <Link to={path}>
-                  <Button>Start</Button>
+                  <Button>Select</Button>
                 </Link>
               </div>
             </div>

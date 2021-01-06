@@ -6,11 +6,9 @@ import HomeBG from './HomeBG/HomeBG.component';
 function Home() {
   return (
     <>
-      <div>
-        <HomeBG />
-        <ExerciseCards />
-        <Deals />
-      </div>
+      <HomeBG />
+      <ExerciseCards />
+      <Deals />
     </>
   );
 }

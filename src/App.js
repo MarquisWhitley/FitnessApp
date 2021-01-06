@@ -8,64 +8,44 @@ import AboutUs from './components/pages/AboutUs/AboutUs.component';
 import Exercise from './components/pages/Exercises/Exercise.component';
 import CreateAccount from './components/CreateAccount/CreateAccount.component';
 import { Fragment } from 'react';
+import { CreateAccountProvider } from './context/CreateAccount.context';
 
 function App() {
+  const components = [
+    { component: <Home />, path: '/', nav: true },
+    { component: <AboutUs />, path: '/about-us', nav: true },
+    { component: <Exercise />, path: '/exercises', nav: true },
+    { component: <SignIn />, path: '/sign-in', nav: true },
+    {
+      component: (
+        <CreateAccountProvider>
+          <CreateAccount />
+        </CreateAccountProvider>
+      ),
+      path: '/create-account',
+      nav: false,
+    },
+  ];
   return (
     <Router>
       <div className='App'>
         <Switch>
-          <Route
-            path='/'
-            exact
-            render={() => (
-              <Fragment>
-                <Navbar />
-                <Home />
-                <Footer />
-              </Fragment>
-            )}
-          />
-          <Route
-            path='/about-us'
-            exact
-            render={() => (
-              <Fragment>
-                <Navbar />
-                <AboutUs />
-                <Footer />
-              </Fragment>
-            )}
-          />
-          <Route
-            path='/exercises'
-            exact
-            render={() => (
-              <Fragment>
-                <Navbar />
-                <Exercise />
-                <Footer />
-              </Fragment>
-            )}
-          />
-          <Route
-            path='/sign-in'
-            exact
-            render={() => (
-              <Fragment>
-                <Navbar />
-                <SignIn />
-                <Footer />
-              </Fragment>
-            )}
-          />
-          <Route
-            path='/create-account'
-            render={() => (
-              <Fragment>
-                <CreateAccount />
-              </Fragment>
-            )}
-          />
+          {components.map((component, i) => {
+            return (
+              <Route
+                path={component.path}
+                exact
+                key={i}
+                render={() => (
+                  <Fragment>
+                    {component.nav ? <Navbar /> : null}
+                    {component.component}
+                    {component.nav ? <Footer /> : null}
+                  </Fragment>
+                )}
+              />
+            );
+          })}
         </Switch>
       </div>
     </Router>
