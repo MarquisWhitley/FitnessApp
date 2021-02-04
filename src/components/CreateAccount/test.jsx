@@ -183,7 +183,6 @@ function AccountForm(props) {
           </button>
         </div>
       </form>
-      {JSON.stringify(accountInfo)}
     </div>
   );
 }

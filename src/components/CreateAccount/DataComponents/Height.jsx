@@ -14,9 +14,8 @@ function Height() {
   }, [totalHeight]);
 
   return (
-    <div>
+    <div className='height'>
       <h1>Height</h1>
-
       <div className='height-container'>
         <div className='height-feet'>
           <h2>Feet</h2>
@@ -57,11 +56,11 @@ function Height() {
             </span>
           </div>
         </div>
-          {console.log(
-            Object.entries(accountInfo).map(([key, value]) => {
-              return [key, value];
-            })
-          )}
+        {console.log(
+          Object.entries(accountInfo).map(([key, value]) => {
+            return [key, value];
+          })
+        )}
         <div className='height-inches'>
           <h2>Inches</h2>
           <div className='inches'>

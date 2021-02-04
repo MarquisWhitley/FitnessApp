@@ -1,6 +1,7 @@
 @import '../../Styles.Utilities/utilities';
 
 .create-account {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +9,11 @@
   height: 100vh;
   width: 100%;
   background-color: $color4;
+  .create-account_home {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
   .form-container {
     display: flex;
     justify-content: center;
@@ -30,42 +36,197 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-.height-container {
+.body-dataset_container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 15vw;
-  height: 27vh;
-  .height-inches,
-  .height-feet {
-    width: 75px;
-    .feet,
-    .inches {
+  flex-direction: column;
+  width: 30vw;
+  height: 50vh;
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .gender {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+    .gender-container {
+      height: 100%;
+      width: 100%;
       display: flex;
-      position: relative;
-      height: 75px;
+      justify-content: space-evenly;
+      align-items: center;
 
-      .input-value {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        font-size: 1.3rem;
-        border-radius: 15px;
+      .gender-input {
+        margin: 10px 0;
       }
 
-      .arrow {
-        position: absolute;
-      }
-      .arrow-down {
-        bottom: 0;
-        width: 100%;
-      }
-      .arrow-up {
-        top: 0;
-        width: 100%;
+      .gender-male,
+      .gender-female {
+        border: 10px solid black;
+        padding: 30px;
+        margin: 0px 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .gender-icon {
+          font-size: 6rem;
+          width: 65px;
+        }
       }
     }
+  }
+
+  .height {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .height-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .height-inches,
+    .height-feet {
+      width: 75px;
+      margin: 0px 15px;
+      .feet,
+      .inches {
+        display: flex;
+        position: relative;
+        height: 75px;
+
+        .input-value {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          font-size: 1.3rem;
+          border-radius: 15px;
+        }
+
+        .arrow {
+          position: absolute;
+        }
+        .arrow-down {
+          bottom: 0;
+          width: 100%;
+        }
+        .arrow-up {
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .weight {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    .weight-container {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .weight-input {
+        width: 75px;
+
+        .pounds {
+          display: flex;
+          position: relative;
+          height: 75px;
+          .input-value_weight {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            border-radius: 15px;
+          }
+          .arrow {
+            position: absolute;
+          }
+          .arrow-down {
+            bottom: 0;
+            width: 100%;
+          }
+          .arrow-up {
+            top: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .form-group {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    padding: 3px 15px;
+    border: 5px solid $color3;
+  }
+
+  .form-group input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+
+  .form-group label {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .form-group label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid black;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+      inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .form-group input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #3498db;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .schedule-container_title {
+    margin-bottom: 15px;
   }
 }

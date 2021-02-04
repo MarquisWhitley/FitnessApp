@@ -10,12 +10,12 @@ export const CreateAccountProvider = (props) => {
     email: '',
     password: '',
     password2: '',
+    gender: '',
+    workout: [],
   });
 
   return (
-    <CreateAccountContext.Provider
-      value={[accountInfo, setAccountInfo]}
-    >
+    <CreateAccountContext.Provider value={[accountInfo, setAccountInfo]}>
       {props.children}
     </CreateAccountContext.Provider>
   );
