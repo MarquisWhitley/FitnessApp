@@ -80,11 +80,15 @@ function CreateAccount() {
   useEffect(() => {
     if (accountInfo.gender === 'Male' || accountInfo.gender === 'Female') {
       setNextSlide(true);
+    } else if (accountInfo.bodyType) {
+      setNextSlide(true);
+    } else if (accountInfo.workout[0]) {
+      setNextSlide(true);
     }
     return () => {
       setNextSlide(false);
     };
-  }, [accountInfo.gender]);
+  }, [accountInfo.gender, accountInfo.bodyType, accountInfo.workout]);
 
   return (
     <div className='create-account'>
@@ -114,6 +118,9 @@ function CreateAccount() {
                 onClick={() =>
                   setComponent((c) => {
                     if (nextSlide) {
+                      if (c >= 2) {
+                        setNextSlide(false);
+                      }
                       return c + 1;
                     }
                     return c + 0;
@@ -126,7 +133,7 @@ function CreateAccount() {
           </div>
         </div>
       )}
-      {console.log(filteredComponents)}
+      {console.log(accountInfo.workout[0])}
     </div>
   );
 }

@@ -1,38 +1,89 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CreateAccountContext } from '../../../context/CreateAccount.context';
 
 function BodyTypeMale() {
+  const [accountInfo, setAccountInfo] = useContext(CreateAccountContext);
+
   return (
     <div>
       <h1>What is your Body Type</h1>
 
       <div className='body-type_container'>
         <label htmlFor='0%-6%'>
-          <input type='radio' name='bodytype' id='0%-6%' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='0%-6%'
+            value={6}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>0%-6%</h2>
         </label>
         <label htmlFor='7%-10%'>
-          <input type='radio' name='bodytype' id='7%-10%' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='7%-10%'
+            value={10}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>7%-10%</h2>
         </label>
         <label htmlFor='11%-15%'>
-          <input type='radio' name='bodytype' id='11%-15%' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='11%-15%'
+            value={15}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>11%-15%</h2>
         </label>
         <label htmlFor='16%-20%'>
-          <input type='radio' name='bodytype' id='16%-20%' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='16%-20%'
+            value={20}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>16%-20%</h2>
         </label>
         <label htmlFor='21%-35%'>
-          <input type='radio' name='bodytype' id='21%-30%' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='21%-30%'
+            value={30}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>21%-35%</h2>
         </label>
         <label htmlFor='36%+'>
-          <input type='radio' name='bodytype' id='36%+' />
+          <input
+            type='radio'
+            name='bodytype'
+            id='36%+'
+            value={36}
+            onChange={(e) => {
+              setAccountInfo({ ...accountInfo, bodyType: e.target.value });
+            }}
+          />
           <div className='body-type_img'></div>
           <h2>36%+</h2>
         </label>
